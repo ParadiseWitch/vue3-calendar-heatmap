@@ -10,7 +10,7 @@ This is primary a Typescript rewrite of [vue-calendar-heatmap](https://github.co
 
 ![](https://i.imgur.com/ntYYTKX.png)
 
-![npm](https://img.shields.io/npm/v/vue3-calendar-heatmap.svg?style=flat-square)
+[![npm](https://img.shields.io/npm/v/vue3-calendar-heatmap.svg?style=flat-square)](https://www.npmjs.com/package/vue3-calendar-heatmap)
 [![TypeScript](https://img.shields.io/badge/-Typescript-informational?style=flat-square)](https://www.typescriptlang.org/)
 [![vue2](https://img.shields.io/badge/vue-3.x-brightgreen.svg?style=flat-square)](https://vuejs.org/)
 
@@ -89,7 +89,7 @@ Array of 6 strings which represents the colors of the progression.
 
 - Default value is equal to the example.
 ```html
-<calendar-heatmap :range-color="['ebedf0', 'dae2ef', '#c0ddf9', '#73b3f3', '#3886e1', '#17459e']" .../>
+<calendar-heatmap :range-color="['#ebedf0', '#dae2ef', '#c0ddf9', '#73b3f3', '#3886e1', '#17459e']" .../>
 ```
 
 ### **max** - `max`
@@ -118,14 +118,28 @@ String representing heatmap's unit of measure. Value is `"contributions"` by def
 
 ### **tooltipFormatter** - `tooltip-formatter`
 A method to have full control about tooltip content.
+
 ```html
+
 <calendar-heatmap :tooltip-formatter="(v) => v.count" .../>
 ```
 
 ### **vertical** - `vertical`
+
 Boolean to switch to vertical mode. `false` by default.
+
 ```html
+
 <calendar-heatmap :vertical="true" .../>
+```
+
+### **round** - `round`
+
+Number to create rounded corners or cirlces in heatmap. `0` by default.
+
+```html
+
+<calendar-heatmap :round="2" .../>
 ```
 
 ## License
